@@ -11,6 +11,9 @@
 		5C4DD9132B4DF06900FEAC02 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4DD9122B4DF06900FEAC02 /* ContentView.swift */; };
 		5C4DD9152B4DF06C00FEAC02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C4DD9142B4DF06C00FEAC02 /* Assets.xcassets */; };
 		5C4DD9182B4DF06C00FEAC02 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C4DD9172B4DF06C00FEAC02 /* Preview Assets.xcassets */; };
+		5C4DD9202B4DF23000FEAC02 /* BrazeKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5C4DD91F2B4DF23000FEAC02 /* BrazeKit */; };
+		5C4DD9222B4DF23000FEAC02 /* BrazeKitCompat in Frameworks */ = {isa = PBXBuildFile; productRef = 5C4DD9212B4DF23000FEAC02 /* BrazeKitCompat */; };
+		5C4DD9242B4DF23000FEAC02 /* BrazeUI in Frameworks */ = {isa = PBXBuildFile; productRef = 5C4DD9232B4DF23000FEAC02 /* BrazeUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C4DD9242B4DF23000FEAC02 /* BrazeUI in Frameworks */,
+				5C4DD9222B4DF23000FEAC02 /* BrazeKitCompat in Frameworks */,
+				5C4DD9202B4DF23000FEAC02 /* BrazeKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +89,11 @@
 			dependencies = (
 			);
 			name = "Braze SDK Testing Playground";
+			packageProductDependencies = (
+				5C4DD91F2B4DF23000FEAC02 /* BrazeKit */,
+				5C4DD9212B4DF23000FEAC02 /* BrazeKitCompat */,
+				5C4DD9232B4DF23000FEAC02 /* BrazeUI */,
+			);
 			productName = "Braze SDK Testing Playground";
 			productReference = 5C4DD90D2B4DF06900FEAC02 /* Braze SDK Testing Playground.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +122,9 @@
 				Base,
 			);
 			mainGroup = 5C4DD9042B4DF06900FEAC02;
+			packageReferences = (
+				5C4DD91E2B4DF23000FEAC02 /* XCRemoteSwiftPackageReference "braze-swift-sdk" */,
+			);
 			productRefGroup = 5C4DD90E2B4DF06900FEAC02 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -342,6 +356,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5C4DD91E2B4DF23000FEAC02 /* XCRemoteSwiftPackageReference "braze-swift-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/braze-inc/braze-swift-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5C4DD91F2B4DF23000FEAC02 /* BrazeKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5C4DD91E2B4DF23000FEAC02 /* XCRemoteSwiftPackageReference "braze-swift-sdk" */;
+			productName = BrazeKit;
+		};
+		5C4DD9212B4DF23000FEAC02 /* BrazeKitCompat */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5C4DD91E2B4DF23000FEAC02 /* XCRemoteSwiftPackageReference "braze-swift-sdk" */;
+			productName = BrazeKitCompat;
+		};
+		5C4DD9232B4DF23000FEAC02 /* BrazeUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5C4DD91E2B4DF23000FEAC02 /* XCRemoteSwiftPackageReference "braze-swift-sdk" */;
+			productName = BrazeUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5C4DD9052B4DF06900FEAC02 /* Project object */;
 }
